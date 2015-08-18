@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Machine Wine Tasting</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Machine Wine Tasting">
+  <meta name="author" content="Ron Segal">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Machine Wine Tasting</h1>
+    <h2>For Coursera Developing Data Products</h2>
+    <p>Ron Segal<br/>Digital Analyst</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id1" style="background:#FFDADA;">
+  <hgroup>
+    <h2><p style="color:darkred;font-size:48px;">Machine Wine &quot;Tasting&quot;</p></h2>
+  </hgroup>
+  <article data-timings="">
+    <figure style="float:left;">
+<img  style="margin:0px 20px; height:100px;" src='assets/img/man_machine_wine_tasting_small.png' alt="Wine Tasting - Man vs Machine"/>
+<figcaption  style="font-size:12px;text-align:center;">Wine Tasting - Man vs Machine</figcaption>
+</figure>
+
+<p>The purpose of the application is to interactively explore aspects of the k-means clustering, unsupervised learning algorithm in a wine &quot;tasting&quot; scenario. It runs the algorithm on a dataset of 13 chemicals analysed from 177 wine samples, cultivated in Italy by 3 different growers.</p>
+
+<ul>
+<li>The application provides an interactive slider to set the number of k-means clusters.</li>
+<li>The results are immediately displayed in a scatterplot with the set number of clusters.</li>
+<li>A two dimensional plot is achieved by linear dimension reduction using discrproj (R package fpc).
+<figure style="float:right;">
+<img  style="margin:5px 0 30px 10px; height:250px;" src='assets/img/ml_wine_tasting_crop.png' alt="Application"/>
+</figure></li>
+<li>The actual grower for each wine sample can be revealed for comparison with the k-means clusters.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id1" style="background:#FFDADA;">
+  <hgroup>
+    <h2><p style="color:darkred;font-size:48px;">Growers and Silhouette</p></h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>In the screen shot of the application shown below, the clusters do indeed allocate wines quite well to growers, although the blue cluster looks doubtful.</li>
+<li>The Machine Wine &quot;Tasting&quot; k-means clustering application uses Silhouette</li>
+<li>Silhouette is a method of interpretation and validation of consistency within clusters of data</li>
+<li>The average Silhouette width over all data of the entire dataset is one kind of measure of how appropriately the data has been clustered. The greater the width the better.</li>
+<li>The Machine Wine &quot;Tasting&quot; application indicates average Silhouette values by a red band, as in the figure.
+<figure style="float:right;">
+<img  style="margin:5px 0 30px 10px; height:250px;" src='assets/img/ml_wine_tasting_with_growers_crop.png' alt="Application with Growers"/>
+</figure></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id1" style="background:#FFDADA;">
+  <hgroup>
+    <h2><p style="color:darkred;font-size:48px;">The &quot;Lost&quot; Plot</p></h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Although the application shows average Silhouette width it doesn&#39;t provide a Silhouette plot. </li>
+<li>A Silhouette plot has been generated here, based on 4 k-means clusters.</li>
+<li>From the previous scatterplot it is perhaps not surprising that one of the clusters has a negative width, indicative of a poor fit.</li>
+<li>In the next version of the application we plan to show Silhouette plots</li>
+<li>The application can be found at: <a href="https://ronsegal.shinyapps.io/mlwines">https://ronsegal.shinyapps.io/mlwines</a></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='<p style="color:darkred;font-size:48px;">Machine Wine &quot;Tasting&quot;</p>'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='<p style="color:darkred;font-size:48px;">Growers and Silhouette</p>'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='<p style="color:darkred;font-size:48px;">The &quot;Lost&quot; Plot</p>'>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
